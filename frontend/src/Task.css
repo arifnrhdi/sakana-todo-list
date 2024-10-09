@@ -1,0 +1,27 @@
+.card {
+  width: 18rem;
+}
+
+.btn-outline-info:hover {
+  color: #fff !important;
+}
+
+.btn-outline-info:active:focus {
+  color: #fff !important;
+}
+
+.text-area {
+  height: 200px;
+}
+
+.alert {
+  font-size: 12px;
+}
+
+.form-select{
+  width: 110px;
+}
+
+p.small {
+    font-size: 13px;
+}

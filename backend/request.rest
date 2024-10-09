@@ -1,0 +1,101 @@
+# Get All Users
+GET http://localhost:2257/users
+
+###
+# Get User Berdasarkan Id
+GET http://localhost:2257/users/
+
+###
+# Membuat User Baru
+POST http://localhost:2257/users
+Content-Type: application/json
+
+{
+    "name": "Arif",
+    "email": "arifu@gmail.com",
+    "password": "12345678",
+    "confPassword": "12345678",
+    "role": "admin"
+}
+
+###
+# Update User
+PATCH  http://localhost:2257/users/
+Content-Type: application/json
+
+{
+    "name": "Arifu",
+    "email": "arif@gmail.com",
+    "password": "2468",
+    "confPassword": "2468",
+    "role": "admin"
+}
+
+###
+# Delete User
+DELETE http://localhost:2257/users/
+
+###
+# Login
+POST http://localhost:2257/login
+Content-Type: application/json
+
+{
+    "email": "arifu@gmail.com",
+    "password": "12345678"
+}
+
+###
+POST http://localhost:2257/login
+Content-Type: application/json
+
+{
+    "email": "yayan@gmail.com",
+    "password": "12345678"
+}
+
+###
+# Get User Berdarkan Login
+GET http://localhost:2257/me
+
+###
+# Log Out
+DELETE http://localhost:2257/logout
+
+
+
+###
+# Get All Task
+GET http://localhost:2257/todos
+
+###
+# Get Task By Id
+GET http://localhost:2257/todo/eb619fa2-a1af-4c26-a4aa-fb3885822987
+
+###
+# Get All Task Admin
+GET http://localhost:2257/todo/admin/6
+
+###
+# Create Task
+POST http://localhost:2257/todos
+Content-Type: application/json
+
+{
+    "title": "Matematika Lanjut 1",
+    "task": "Kuis blablablabla"
+}
+
+###
+# Update Task
+PATCH http://localhost:2257/todo/
+Content-Type: application/json
+
+{
+    "title": "Pemrograman Berbasis Obyek",
+    "task": "Projek aplikasi sederhana berbasis objek dengan bahasa bebas"
+}
+
+###
+# Delete Task
+DELETE  http://localhost:2257/todo/
