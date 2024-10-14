@@ -1,12 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Logout, reset } from "../features/AuthSlice.js";
 
 const NavBar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {user} = useSelector((state)=>state.auth);
 
   const LogOut = () => {
     dispatch(Logout());
@@ -32,7 +31,7 @@ const NavBar = () => {
 
           <div className="d-inline-flex container align-items-center justify-content-end">
             <div className="col-md-3 text-end">
-              <button className="btn btn-sm button text-white fw-medium"  onClick={LogOut}>
+              <button className="btn btn-sm button btn-dark text-white fw-medium"  onClick={LogOut}>
                 {" "}
                 Log Out{" "}
               </button>
